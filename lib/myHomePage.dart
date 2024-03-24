@@ -1,10 +1,4 @@
-import 'dart:ui';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 
 class MyHomePage extends StatelessWidget {
   @override
@@ -40,9 +34,10 @@ class MyHomePage extends StatelessWidget {
                       cursorColor: Colors.white30,
                       decoration: InputDecoration(
                         focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Color.fromARGB(255, 255, 44,44)),
-                          borderRadius: BorderRadius.all(Radius.circular(3.0))
-                        ),
+                            borderSide: BorderSide(
+                                color: Color.fromARGB(255, 255, 44, 44)),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(3.0))),
                         hintText: 'Insira seu Cpf/Cnpj',
                         hintStyle: TextStyle(color: Colors.white30),
                         fillColor: Colors.black87,
@@ -68,9 +63,10 @@ class MyHomePage extends StatelessWidget {
                       cursorColor: Colors.white30,
                       decoration: InputDecoration(
                         focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Color.fromARGB(255, 255, 44,44)),
-                          borderRadius: BorderRadius.all(Radius.circular(3.0))
-                        ),
+                            borderSide: BorderSide(
+                                color: Color.fromARGB(255, 255, 44, 44)),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(3.0))),
                         hintText: 'Insira sua Senha',
                         hintStyle: TextStyle(color: Colors.white30),
                         fillColor: Colors.black87,
@@ -78,9 +74,28 @@ class MyHomePage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Text(
-                    'Esqueceu sua Senha? Clique Aqui!',
-                    style: TextStyle(color: Colors.white, fontSize: 12.0),
+                  SizedBox(
+                    width: 350.0,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: <Widget>[
+                        Text(
+                          'Esqueceu sua senha?',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 12.0,
+                              decoration: TextDecoration.underline),
+                        ),
+                        SizedBox(width: 5),
+                        Text(
+                          'Clique aqui!',
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 255, 44, 44),
+                              fontSize: 12.0,
+                              decoration: TextDecoration.underline),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
@@ -89,17 +104,36 @@ class MyHomePage extends StatelessWidget {
                 width: 350.0,
                 height: 50.0,
                 child: ElevatedButton(
-                  onPressed: () {
-                  },
+                  onPressed: () {},
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color.fromARGB(255, 255, 44, 44),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(3.0),
                     ),
                   ),
-                  child: const Text('Entrar', style: TextStyle(color: Colors.white,fontSize: 15.0),),
+                  child: const Text(
+                    'Entrar',
+                    style: TextStyle(color: Colors.white, fontSize: 15.0),
+                  ),
                 ),
               ),
+              const SizedBox(height: 20),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    'Novo A-Cinante? ',
+                    style: TextStyle(color: Colors.white, fontSize: 12.0),
+                  ),
+                  Text(
+                    'Registre-se agora!',
+                    style: TextStyle(
+                        color: Color.fromARGB(255, 255, 44, 44),
+                        fontSize: 12.0,
+                        decoration: TextDecoration.underline),
+                  ),
+                ],
+              )
             ],
           ),
         ),
